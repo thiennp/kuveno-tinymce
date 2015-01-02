@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kuveno editor</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="http://cognistreamer.github.io/tinyMCE-mention/stylesheets/autocomplete.css">
+  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/css/pikaday.css">
+  <script type="text/javascript" src="vendor/js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="vendor/js/tinymce/tinymce.min.js"></script>
+  <script type="text/javascript" src="vendor/js/lodash.min.js"></script>
+  <script type="text/javascript" src="vendor/js/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="vendor/js/pikaday.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      main()
+    })
+  </script>
+  <style>
+    textarea[name=meeting-doc] { height: 500px; }
+    button[name=save] { margin-top: 10px; }
+
+    /** Ugly hack to beat the ugly z-index: 65000+ hack in TinyMCE Dialog **/
+    .pika-single { z-index: 70000; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form method="post">
+      <div class="row">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-2">
+            <h1>Meeting notes -editor</h1>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Demo: left menu -->
+          <div class="col-md-2">
+            <p>
+              <a href="index.html">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                <strong>Back</strong>
+              </a>
+            </p>
+            <p>&nbsp;</p>
+            <label>Group</label><br>
+            Acme Board<br><br>
+            <label>Previous</label><br>
+            Board meeting 3/2014<br><br>
+            <label>Tim</label><br>
+            3.11.2014 18:00<br><br>
+            <label>Participants</label>
+            <ul>
+              <li>John</li>
+              <li>Tim</li>
+              <li>Eliza</li>
+            </ul>
+            <label>Model</label><br>
+            Board meeting (official)<br><br>
+          </div>
+          <!-- Demo: left menu ends -->
+
+          <div class="col-md-8">
+            <div name="meeting-doc">
+              <h1>Meeting notes</h1>
+              <h2>1. Opening</h2>
+              <p>Tim opened the meeting at 18:01</p>
+              <h2>2. Investments</h2>
+              <p class="task"><span class="assignee mceNonEditable" data-id="1235">John</span> will further research the market in Venezuela.</p>
+              <p>Discussion about our future investments in China. This should be done by 12.12.2014</p>
+              <p class="decision">
+                ﻿Decided to concentrate the next board meeting on the South-American market.
+              </p>
+              <h2>3. Human resources</h2>
+              <p>No real news.</p>
+              <h2>4. Closing</h2>
+              <p>The meeting was closed at 18:53</p>
+            </div>
+            <br/>
+            <button name="save" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

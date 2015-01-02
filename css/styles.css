@@ -1,0 +1,44 @@
+body {
+  font-size: 14px;
+}
+
+.assignee, .user {
+  display: inline;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: italic;
+  color: #2458cc;
+}
+
+.deadline {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 85%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background-color:#5bc0de
+}
+
+
+.decision, .task {
+  padding: 10px 40px 10px 10px;
+  background-size: 12px;
+  border-radius: .25em;
+}
+
+.decision {
+  background: url('../img/legal10.png') no-repeat 98% 50%;
+  background-size: 16px;
+  background-color: rgba(126, 238, 126, 0.40);
+}
+
+.task {
+  background: url('../img/task.png') no-repeat 98% 50%;
+  background-size: 16px;
+  background-color: rgba(49, 176, 213, 0.29);
+}
